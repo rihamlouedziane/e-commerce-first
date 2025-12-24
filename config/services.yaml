@@ -1,0 +1,23 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+
+    app.mailer.newsletter:
+        class: App\Service\Mailer\Mailer
+        arguments:
+            $fromAddress: 'newsletter@eheio.ma'
+
+    app.mailer.register:
+        class: App\Service\Mailer\Mailer
+        arguments:
+            $fromAddress: 'register@eheio.ma'
+
+    app.mailer.alert:
+        class: App\Service\Mailer\Mailer
+        arguments:
+            $fromAddress: 'alert@eheio.ma'

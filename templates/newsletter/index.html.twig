@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NewsletterController!{% endblock %}
+
+{% block body %}
+<form method="post" action="{{ url('app.newsletter.register') }}">
+    <input name="email" type="email"/>
+    <button type="submit">S'inscrire</button>
+</form>
+{% endblock %}
